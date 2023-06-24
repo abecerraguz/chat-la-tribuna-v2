@@ -1,4 +1,4 @@
-eal# Simple workflow for deploying static content to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
 name: Deploy-GitHub-Pages
 
 on:
