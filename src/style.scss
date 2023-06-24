@@ -11,6 +11,8 @@ $text-button-two:#ffffff;
 $border: #cae9f4;
 $border-left:#dde9ed;
 $border-img: #88b4c3;
+$border-img-avatar: #80bbe3;
+$border-text: #80bbe3;
 $color-text: #3a3a3a;
 $color-text-hover: #000000;
 $border-radius-0: 0;
@@ -98,8 +100,19 @@ body {
         margin-right:10px;
         transition: all ease 0.25s;
         color: $text-button-one;
-        font-weight: 600;
+        font-weight:600;
+        font-size: 0.8rem;
+        letter-spacing: 0.03125rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
+        i{
+          font-size: 1.3rem;
+          // margin-top: 4px;
+          margin-right: 5px;
+        }
         &:hover {
           background-color:$fondo-button-two;
           color: $text-button-two;
@@ -113,8 +126,20 @@ body {
         border-radius: $border-radius-5;
         color: $text-button-two;
         transition: all ease 0.25s;
-        cursor: pointer;
+        font-size: 1rem;
         font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.03125rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+          // margin-top: 4px;
+          margin-right: 5px;
+          font-size: 1.3rem;
+        }
         &:hover {
           background-color: $fondo-button-two-hover;
           color: $text-button-two;
@@ -140,7 +165,7 @@ body {
         width: 60px;
         height: 60px;
         border-radius: $border-radius-10;
-        // border:3px solid $border-img;
+        border:3px solid $border-img-avatar;
         margin-right: 5px;
       }
     }
@@ -149,21 +174,23 @@ body {
       height: auto;
       &-text{
         background-color:$fondo-cometario;
-        border-radius:$border-radius-0 $border-radius-5 $border-radius-5 $border-radius-0;
-        padding: 18px 15px;
+        border-radius:$border-radius-5;
+        padding: 18px 15px 18px 25px;
         margin:0;
-        border-left: 3px solid $border-left;
+        border: 1px solid $border-left;
         position: relative;
       }
       &-text:after{
         content:'';
         position: absolute;
-        height: 0;
-        border-style: solid;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent $border-left transparent transparent;
-        top: 0;
-        left: -15px;
+        height: 2px;
+        width: 20px;
+        background-color:#80bbe3;
+        // border-style: solid;
+        // border-width: 10px 15px 10px 0;
+        // border-color: transparent $border-left transparent transparent;
+        top: 30px;
+        left: -20px;
       }
       &-like{
         width: 100%;
@@ -196,8 +223,7 @@ body {
         small.textTime{
           margin-right: 20px;
           margin-left: 5px;
-         
-
+          color: #989898;
       }
     }
   }
