@@ -18,4 +18,4 @@
         // Se agrega la base carpeta donde se encuentra el proyecto
         base: '/chat-la-tribuna-v2/',
     });
-    // 
+    // //
