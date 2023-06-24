@@ -1,0 +1,19 @@
+{
+  "name": "vite-proyecto-inicio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6",
+    "terser": "^5.17.3",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^4.0.3"
+  }
+}

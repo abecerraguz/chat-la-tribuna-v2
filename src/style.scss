@@ -1,0 +1,207 @@
+// Variables 
+$fondo-body: #ffffff;
+$fondo-chat: #fafafa;
+$fondo-cometario: rgb(239, 243, 247);
+$fondo-button-two:#2c7fb7;
+$fondo-button-two-hover:#80bbe3;
+$fondo-button-one:#ffffff;
+$border-button:#31719c;
+$text-button-one:#2c7fb7;
+$text-button-two:#ffffff;
+$border: #cae9f4;
+$border-left:#dde9ed;
+$border-img: #88b4c3;
+$color-text: #3a3a3a;
+$color-text-hover: #000000;
+$border-radius-0: 0;
+$border-radius-5: 5px;
+$border-radius-10:10px;
+$border-radius-15:15px;
+$border-radius-20:20px;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $color-text;
+  background-color: $fondo-body;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: $color-text;
+  text-decoration: inherit;
+  transition: all ease 0.25s;
+}
+a:hover {
+  color: $color-text-hover;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50%;
+  height: 100%;
+  max-height: 600px;
+  margin: 0 auto;
+  border-radius: $border-radius-0;
+  background-color: $fondo-chat;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1rem;
+    border-bottom: 1px solid $border;
+    height: 70px;
+    &-logo {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-buttonOne {
+        width: 200px;
+        height: 40px;
+        background-color:$fondo-button-one;
+        border: 2px solid $border-button;
+        border-radius: $border-radius-5;
+        margin-right:10px;
+        transition: all ease 0.25s;
+        color: $text-button-one;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          background-color:$fondo-button-two;
+          color: $text-button-two;
+        }
+      }
+      &-buttonTwo {
+        width: 200px;
+        height: 40px;
+        background-color:$fondo-button-two;
+        border: 2px solid $border-button;
+        border-radius: $border-radius-5;
+        color: $text-button-two;
+        transition: all ease 0.25s;
+        cursor: pointer;
+        font-weight: 600;
+        &:hover {
+          background-color: $fondo-button-two-hover;
+          color: $text-button-two;
+        }
+      }
+    }
+  }
+
+  &__body{
+    width: 100%;
+    padding: 1rem;
+    &-contenedorPadre{
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 0;
+    }
+    &-avatarPadre{
+      width: 10%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      img{
+        width: 60px;
+        height: 60px;
+        border-radius: $border-radius-10;
+        // border:3px solid $border-img;
+        margin-right: 5px;
+      }
+    }
+    &-contentCometarioPadre{
+      width: 90%;
+      height: auto;
+      &-text{
+        background-color:$fondo-cometario;
+        border-radius:$border-radius-0 $border-radius-5 $border-radius-5 $border-radius-0;
+        padding: 18px 15px;
+        margin:0;
+        border-left: 3px solid $border-left;
+        position: relative;
+      }
+      &-text:after{
+        content:'';
+        position: absolute;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent $border-left transparent transparent;
+        top: 0;
+        left: -15px;
+      }
+      &-like{
+        width: 100%;
+        display:flex;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 0.8rem;
+        small{
+          height: 20px;
+          display: flex;
+          justify-content:flex-start;
+          align-items: center;
+          span{
+            margin-right: 20px;
+            margin-left: 5px;
+          }
+          span.textNum{
+            margin-right: 20px;
+            margin-left: 5px;
+            font-weight: 600;
+          }
+         font-weight: 600;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        small.textTime{
+          margin-right: 20px;
+          margin-left: 5px;
+         
+
+      }
+    }
+  }
+}
+
+
+
