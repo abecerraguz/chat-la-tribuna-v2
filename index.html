@@ -8,8 +8,10 @@
   <script src="https://kit.fontawesome.com/f6f28e61f7.js" crossorigin="anonymous"></script>
   <title>Vite App</title>
 </head>
+
 <body>
   <div class="chat">
+
     <!-- Inicio chat__header -->
     <div class="chat__header">
       <div class="chat__header-logo">
@@ -17,28 +19,40 @@
       </div>
       <div class="chat__header-button">
         <button class="chat__header-button-buttonOne"> <i class="fa-regular fa-envelope"></i>Inscribirme</button>
-        <button class="chat__header-button-buttonTwo"> <i class="fa-solid fa-arrow-right-to-bracket"></i>Iniciar sesión</button>
+        <button class="chat__header-button-buttonTwo"> <i class="fa-solid fa-arrow-right-to-bracket"></i>Iniciar
+          sesión</button>
       </div>
+   
+    </div>
+    <div class="chat__header-contenedor">
+      <p>Inicia sesión o crea una cuenta en Comunidad Bío Bío para comentar. Como una forma de mantener un debate respetuoso, eliminaremos cuentas falsas y mensajes agresivos u ofensivos. </p>
+      <p class="chat__header-contenedor-infoCometarios">32 comentarios</p>
     </div>
     <!-- /fin chat__header -->
-    
+
     <!-- Inicio chat__body -->
     <div class="chat__body">
+
+      <!-- Inicio Padre 1 -->
       <div class="chat__body-contenedorPadre">
-    
+
         <!-- Inicio Avatar Padre -->
         <div class="chat__body-avatarPadre">
           <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
         </div>
         <!-- Cierre Avatar Padre -->
-    
+
         <!-- Inicio cometario Padre -->
         <div class="chat__body-contentCometarioPadre">
-          <p class="chat__body-contentCometarioPadre-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+          <p class="chat__body-contentCometarioPadre-text">
+            <span class="chat__body-contentCometarioPadre-text-name">Fernanda Rojas</span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
             corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
-            error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+            error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Autem,
             corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
-            error, possimus fugit assumenda animi aliquam sed optio!</p>
+            error, possimus fugit assumenda animi aliquam sed optio!
+          </p>
           <div class="chat__body-contentCometarioPadre-like">
             <small>
               <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
@@ -48,13 +62,201 @@
             </small>
             <small class="textTime">Hace 4 horas</small>
           </div>
+
+
+          <!-- Inicio Contenedor Hijo 1 -->
+          <div class="chat__body-contenedorHijo">
+
+            <!-- Inicio Avatar Hijo -->
+            <div class="chat__body-avatarHijo">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
+            </div>
+            <!-- Cierre Avatar Hijo -->
+
+            <!-- Inicio cometario Hijo 1 -->
+            <div class="chat__body-contentCometarioHijo">
+              <p class="chat__body-contentCometarioHijo-text">
+                <span class="chat__body-contentCometarioHijo-text-name">Fernanda Rojas</span>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!
+              </p>
+              <div class="chat__body-contentCometarioHijo-like">
+                <small>
+                  <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
+                </small>
+                <small>
+                  <img src="./src/public/no-like.svg" alt="not-like"><span class="textNum">(2)</span>
+                </small>
+                <small class="textTime">Hace 4 horas</small>
+              </div>
+            </div>
+            <!-- Cierre cometario Hijo 1-->
+
+          </div>
+          <!-- /Cierre Contenedor Hijo 1 -->
+
+          <!-- Inicio Contenedor Hijo 2 -->
+          <div class="chat__body-contenedorHijo">
+
+            <!-- Inicio Avatar Hijo -->
+            <div class="chat__body-avatarHijo">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
+            </div>
+            <!-- Cierre Avatar Hijo -->
+
+            <!-- Inicio cometario Hijo 1 -->
+            <div class="chat__body-contentCometarioHijo">
+              <p class="chat__body-contentCometarioHijo-text">
+                <span class="chat__body-contentCometarioHijo-text-name">Fernanda Rojas</span>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!
+              </p>
+              <div class="chat__body-contentCometarioHijo-like">
+                <small>
+                  <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
+                </small>
+                <small>
+                  <img src="./src/public/no-like.svg" alt="not-like"><span class="textNum">(2)</span>
+                </small>
+                <small class="textTime">Hace 4 horas</small>
+              </div>
+            </div>
+            <!-- Cierre cometario Hijo 1-->
+
+          </div>
+          <!-- /Cierre Contenedor Hijo 2-->
+
+
         </div>
         <!-- Cierre cometario Padre -->
+
       </div>
+       <!-- Cierre Padre 1 -->
+
+      <!-- Inicio Padre 2 -->
+      <div class="chat__body-contenedorPadre">
+
+        <!-- Inicio Avatar Padre -->
+        <div class="chat__body-avatarPadre">
+          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
+        </div>
+        <!-- Cierre Avatar Padre -->
+
+        <!-- Inicio cometario Padre -->
+        <div class="chat__body-contentCometarioPadre">
+          <p class="chat__body-contentCometarioPadre-text">
+            <span class="chat__body-contentCometarioPadre-text-name">Fernanda Rojas</span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+            corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+            error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Autem,
+            corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+            error, possimus fugit assumenda animi aliquam sed optio!
+          </p>
+          <div class="chat__body-contentCometarioPadre-like">
+            <small>
+              <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
+            </small>
+            <small>
+              <img src="./src/public/no-like.svg" alt="not-like"><span class="textNum">(2)</span>
+            </small>
+            <small class="textTime">Hace 4 horas</small>
+          </div>
+
+
+          <!-- Inicio Contenedor Hijo 1 -->
+          <div class="chat__body-contenedorHijo">
+
+            <!-- Inicio Avatar Hijo -->
+            <div class="chat__body-avatarHijo">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
+            </div>
+            <!-- Cierre Avatar Hijo -->
+
+            <!-- Inicio cometario Hijo 1 -->
+            <div class="chat__body-contentCometarioHijo">
+              <p class="chat__body-contentCometarioHijo-text">
+                <span class="chat__body-contentCometarioHijo-text-name">Fernanda Rojas</span>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!
+              </p>
+              <div class="chat__body-contentCometarioHijo-like">
+                <small>
+                  <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
+                </small>
+                <small>
+                  <img src="./src/public/no-like.svg" alt="not-like"><span class="textNum">(2)</span>
+                </small>
+                <small class="textTime">Hace 4 horas</small>
+              </div>
+            </div>
+            <!-- Cierre cometario Hijo 1-->
+
+          </div>
+          <!-- /Cierre Contenedor Hijo 1 -->
+
+          <!-- Inicio Contenedor Hijo 2 -->
+          <div class="chat__body-contenedorHijo">
+
+            <!-- Inicio Avatar Hijo -->
+            <div class="chat__body-avatarHijo">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Autor">
+            </div>
+            <!-- Cierre Avatar Hijo -->
+
+            <!-- Inicio cometario Hijo 1 -->
+            <div class="chat__body-contentCometarioHijo">
+              <p class="chat__body-contentCometarioHijo-text">
+                <span class="chat__body-contentCometarioHijo-text-name">Fernanda Rojas</span>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Autem,
+                corporis fugit? Reiciendis, esse est perferendis, blanditiis alias iusto numquam nulla molestiae omnis
+                error, possimus fugit assumenda animi aliquam sed optio!
+              </p>
+              <div class="chat__body-contentCometarioHijo-like">
+                <small>
+                  <img src="./src/public/like.svg" alt="like"><span class="textNum">(10)</span>
+                </small>
+                <small>
+                  <img src="./src/public/no-like.svg" alt="not-like"><span class="textNum">(2)</span>
+                </small>
+                <small class="textTime">Hace 4 horas</small>
+              </div>
+            </div>
+            <!-- Cierre cometario Hijo 1-->
+
+          </div>
+          <!-- /Cierre Contenedor Hijo 2-->
+
+
+        </div>
+        <!-- Cierre cometario Padre -->
+        
+      </div>
+      <!-- /Cierre Padre 2 -->
+
     </div>
     <!-- /Cierre chat__body -->
-    
-    </div>
+
+    <!-- Inicio Mostrar mas cometarios -->
+      <button class="buttonMostrarMas"><i class="fa-solid fa-angle-down"></i>Mostrar mas comentarios</button>
+    <!-- Cierre Mostrar mas cometarios -->
+
+  </div>
   <div id="app"></div>
   <script type="module" src="./src/main.js"></script>
 </body>

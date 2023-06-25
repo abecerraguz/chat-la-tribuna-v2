@@ -1,7 +1,7 @@
 // Variables 
 $fondo-body: #ffffff;
 $fondo-chat: #fafafa;
-$fondo-cometario: rgb(239, 243, 247);
+$fondo-cometario: #eff3f7;
 $fondo-button-two:#2c7fb7;
 $fondo-button-two-hover:#80bbe3;
 $fondo-button-one:#ffffff;
@@ -14,6 +14,7 @@ $border-img: #88b4c3;
 $border-img-avatar: #80bbe3;
 $border-text: #80bbe3;
 $color-text: #3a3a3a;
+$color-name:#2c7fb7;
 $color-text-hover: #000000;
 $border-radius-0: 0;
 $border-radius-5: 5px;
@@ -21,42 +22,8 @@ $border-radius-10:10px;
 $border-radius-15:15px;
 $border-radius-20:20px;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: $color-text;
-  background-color: $fondo-body;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: $color-text;
-  text-decoration: inherit;
-  transition: all ease 0.25s;
-}
-a:hover {
-  color: $color-text-hover;
-}
-
-body * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-height: 100vh;
-}
 
 .chat {
   display: flex;
@@ -64,21 +31,44 @@ body {
   width: 100%;
   max-width: 50%;
   height: 100%;
-  max-height: 600px;
+  max-height: 100%;
   margin: 0 auto;
   border-radius: $border-radius-0;
   background-color: $fondo-chat;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
+  margin: 1.5rem auto;
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light dark;
+  color: $color-text;
+  padding: 0 1rem;
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 1rem;
+    padding: 10px 0;
     border-bottom: 1px solid $border;
     height: 70px;
+    box-sizing: border-box;
+    &-contenedor {
+      box-sizing: border-box;
+      padding: 0;
+      &-infoCometarios{
+        margin-right: 20px;
+        margin-left: 5px;
+        color: #989898;
+        font-weight: 600;
+      }
+    }
     &-logo {
       display: flex;
       align-items: center;
@@ -86,11 +76,13 @@ body {
       font-size: 1.25rem;
       font-weight: 600;
       text-align: center;
+      box-sizing: border-box;
     }
     &-button {
       display: flex;
       align-items: center;
       justify-content: center;
+      box-sizing: border-box;
       &-buttonOne {
         width: 200px;
         height: 40px;
@@ -107,6 +99,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
         cursor: pointer;
         i{
           font-size: 1.3rem;
@@ -131,6 +124,7 @@ body {
         font-size: 0.8rem;
         letter-spacing: 0.03125rem;
         text-transform: uppercase;
+        box-sizing: border-box;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -150,17 +144,20 @@ body {
 
   &__body{
     width: 100%;
-    padding: 1rem;
+    padding: 0;
+    box-sizing: border-box;
     &-contenedorPadre{
       display: flex;
       flex-direction: row;
       padding: 1rem 0;
+      box-sizing: border-box;
     }
     &-avatarPadre{
       width: 10%;
       height: auto;
       display: flex;
       justify-content: center;
+      box-sizing: border-box;
       img{
         width: 60px;
         height: 60px;
@@ -172,6 +169,7 @@ body {
     &-contentCometarioPadre{
       width: 90%;
       height: auto;
+      box-sizing: border-box;
       &-text{
         background-color:$fondo-cometario;
         border-radius:$border-radius-5;
@@ -179,6 +177,16 @@ body {
         margin:0;
         border: 1px solid $border-left;
         position: relative;
+        height: auto;
+        box-sizing: border-box;
+        &-name{
+          display: block;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0rem;
+          color: $color-name;
+          box-sizing: border-box;
+        }
       }
       &-text:after{
         content:'';
@@ -225,9 +233,127 @@ body {
           margin-left: 5px;
           color: #989898;
       }
+   
     }
+
+
+    // Inicio Contenedor Hijo
+    &-contenedorHijo{
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 0;
+    }
+    &-avatarHijo{
+      width: 10%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      img{
+        width: 60px;
+        height: 60px;
+        border-radius: $border-radius-10;
+        border:3px solid $border-img-avatar;
+        margin-right: 5px;
+      }
+    }
+    &-contentCometarioHijo{
+      width: 90%;
+      height: auto;
+      &-text{
+        background-color:$fondo-cometario;
+        border-radius:$border-radius-5;
+        padding: 18px 15px 18px 25px;
+        margin:0;
+        border: 1px solid $border-left;
+        position: relative;
+        height: auto;
+        &-name{
+          display: block;
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0rem;
+          color: $color-name;
+        }
+      }
+      &-text:after{
+        content:'';
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background-color:#80bbe3;
+        // border-style: solid;
+        // border-width: 10px 15px 10px 0;
+        // border-color: transparent $border-left transparent transparent;
+        top: 30px;
+        left: -20px;
+      }
+      &-like{
+        width: 100%;
+        display:flex;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 0.8rem;
+        small{
+          height: 20px;
+          display: flex;
+          justify-content:flex-start;
+          align-items: center;
+          span{
+            margin-right: 20px;
+            margin-left: 5px;
+          }
+          span.textNum{
+            margin-right: 20px;
+            margin-left: 5px;
+            font-weight: 600;
+          }
+         font-weight: 600;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        small.textTime{
+          margin-right: 20px;
+          margin-left: 5px;
+          color: #989898;
+      }
+   
+    }
+    // Cierre Contenedor Hijo
   }
 }
 
 
+.buttonMostrarMas{
+    width: 100%;
+    height: 40px;
+    background-color:$fondo-button-two;
+    border: 2px solid $border-button;
+    border-radius: $border-radius-5;
+    margin:1rem 0;
+    transition: all ease 0.25s;
+    color: $text-button-two;
+    font-weight:600;
+    font-size: 0.8rem;
+    letter-spacing: 0.03125rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 
+    cursor: pointer;
+    i{
+      font-size: 1.3rem;
+      // margin-top: 4px;
+      margin-right: 5px;
+    }
+    &:hover {
+      background-color:$fondo-button-one;
+      color: $text-button-one;
+    }
+  }
+  
