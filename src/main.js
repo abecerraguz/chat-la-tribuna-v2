@@ -1,10 +1,16 @@
-import './style.scss'
-import javascriptLogo from './public/javascript.svg'
-import viteLogo from './public/vite.svg'
-import { setupCounter } from './components/counter.js'
+import './style.scss';
+import { loadPush, unLoadPush } from './components/loadPush.js';
+import * as UI from './components/interfaz.js'
 
-document.querySelector('#app').innerHTML = `
+const windowObject = window.document;
 
-`
 
-setupCounter(document.querySelector('#counter'))
+if( typeof window === 'object' ){
+
+    window.addEventListener('DOMContentLoaded', function(){
+        loadPush(windowObject);
+        UI.buttonSiPorNotificaciones.addEventListener('click', unLoadPush );
+        UI.buttonNoNotificaciones.addEventListener('click', unLoadPush )
+    })
+
+}

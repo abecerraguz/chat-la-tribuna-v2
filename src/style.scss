@@ -28,6 +28,9 @@ $screen-sm-min: 544px;
 $screen-md-min: 768px;
 $screen-lg-min: 1024px;
 
+// Font-Family
+$font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
 @mixin breakpoint($media) {
   @if $media == xs {
     @media only screen and (min-width: $screen-xs-min) { @content; }
@@ -53,11 +56,10 @@ $screen-lg-min: 1024px;
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  margin: 0 auto;
   border-radius: $border-radius-0;
   background-color: $fondo-chat;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 1.5rem auto;
+  margin: 5.5rem auto;
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
   box-sizing: border-box;
@@ -526,4 +528,222 @@ $screen-lg-min: 1024px;
       color: $text-button-one;
     }
   }
+
+.nav{
+  background-color: $fondo-button-two;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  &__container{
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @include breakpoint(xs) {
+      justify-content: center;
+    }
+    @include breakpoint(md) {
+      justify-content: space-between;
+    }
+  }
+  &__option{
+
+    @include breakpoint(xs) {
+      display: none;
+      list-style: none;
+    }
+  
+    @include breakpoint(md) {
+      display: flex;
+      list-style: none;
+    }
+  
+    li a{
+      color: rgb(255, 255, 255);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.contentPush{
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 6px rgba(5,27,44,.06), 0 2px 32px rgba(5,27,44,.16);
+  left: 50%;
+  transform: translateX(-50%) translateY(-110%);
+  transition: transform .5s cubic-bezier(.62,.07,.54,.77) .5s;
+
+  @include breakpoint(xs) {
+    padding: 0.5rem;
+  }
+
+  @include breakpoint(md) {
+    padding: 1.5rem;
+  }
+
+  &__brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    
+    @include breakpoint(xs) {
+      gap: 0.5rem;
+      margin-bottom: 1em;
+      padding:0 1rem;
+      height: 100px;
+    }
+    @include breakpoint(md) {
+      gap: 1rem;
+      padding:0;
+    }
+  
+    &-img{
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      @include breakpoint(xs) {
+        width: 120px;
+        height: 120px;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    p{
+      font-family: $font-family-sans-serif;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__buttons{
+    padding-top: 1em;
+    border-top: 1px solid #dadada;
+    display: flex;
+    @include breakpoint(xs) {
+      max-width:100%;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    @include breakpoint(md) {
+      gap: 1rem;
+      display: flex;
+      flex-direction:row;
+      margin: 0;
+    }
+    
+    .buttonSiPorNotificaciones{
+      width: 50%;
+      height: 40px;
+      background-color:$fondo-button-two;
+      border: 2px solid $border-button;
+      border-radius: $border-radius-5;
+      transition: all ease 0.25s;
+      color: $text-button-two;
+      font-weight:600;
+      font-size: 0.8rem;
+      letter-spacing: 0.03125rem;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      @include breakpoint(xs) {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 0.5rem;
+      }
+      @include breakpoint(md) {
+        width: 50%;
+        height: 40px;
+      }
+      i{
+        font-size: 1.3rem;
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color:$fondo-button-one;
+        color: $text-button-one;
+      }
+    }
+
+    .buttonNoNotificaciones {
+     
+      @include breakpoint(xs) {
+        width: auto;
+        height: 40px;
+        width: 50%;
+        background-color:$fondo-button-one;
+        border: 2px solid $border-button;
+        border-radius: $border-radius-5;
+        margin-right:10px;
+        transition: all ease 0.25s;
+        color: $text-button-one;
+        font-weight:600;
+        font-size: 0.7rem;
+        letter-spacing: 0.03125rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include breakpoint(xs) {
+          width: 100%;
+          height: 40px;
+          margin-bottom: 0.5rem;
+        }
+        @include breakpoint(md) {
+          width: 50%;
+          height: 40px;
+        }
+      }
+  
+      i{
+        @include breakpoint(xs) {
+          font-size: 0.8rem;
+          margin-right: 5px;
+        }
+    
+        @include breakpoint(md) {
+          font-size: 1.3rem;
+          margin-right: 5px;
+        }
+      }
+      &:hover {
+        background-color:$fondo-button-two;
+        color: $text-button-two;
+      }
+    }
+  }
+
+
+
+}
+
+.slide-down{
+    transform: translateX(-50%) translateY(0);
+}
   
