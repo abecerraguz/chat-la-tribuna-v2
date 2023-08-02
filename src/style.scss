@@ -746,4 +746,133 @@ $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 .slide-down{
     transform: translateX(-50%) translateY(0);
 }
+
+.containerMatch{
+    max-width: 40%;
+    height: auto;
+    margin: 120px auto;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    background: #f6f6f6;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      a{
+        position:absolute;
+        position: absolute;
+        top: 25%;
+        /* left: 56%; */
+        width: 120px;
+        max-width: 120px;
+        height: 120px;
+        animation: pulse 1s ease-in-out infinite;
+      }
+      
+    }
+
+    .loader-circle {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-color: #f3f3f3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: pulse 3s ease-in-out infinite;
+      // position: relative;
+    }
+
+
+    .loader-innerCircle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 8px solid #e9521e;
+      border-color: #2bbcc8 transparent #e9521e transparent;
+      animation: loaderDos 3s linear infinite;
+    }
+
+    
+
+    .loader-innerCircle:after {
+      content: "";
+      display: block;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 8px solid #fee000;
+      border-color: #ffb605 transparent #fee000;
+      animation: loader 2s linear infinite;
+    }
+
+    .loader-text {
+      color: #7e3af2;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+
+    .containerMatch__text p{
+      font-family: $font-family-sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+    };
+
+    .containerMatch__text-link{
+      font-family: $font-family-sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $text-button-one;
+      text-decoration: none;
+      transition: all ease 0.25s;
+      &:hover{
+        color: $fondo-button-two-hover;
+      }
+    }
+
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes loaderDos {
+      0% {
+        transform: rotate(-360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes pulse {
+       0% {
+         transform: scale(0.8);
+         opacity: 0.5;
+       }
+       50% {
+         transform: scale(1);
+         opacity: 1;
+       }
+       100% {
+         transform: scale(0.8);
+         opacity: 0.5;
+       }
+     }
+}
   
