@@ -748,17 +748,30 @@ $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .containerMatch{
-    max-width: 40%;
+    max-width: 100%;
     height: auto;
     margin: 120px auto;
-    display: flex;
-    // justify-content: center;
-    align-items: center;
     background: #f6f6f6;
     border-radius: 10px;
     padding: 1rem;
-    gap: 1rem;
+ 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(xs) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:center;
+      gap: 0;
+    }
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content:flex-start;
+      gap: 1rem;
+    }
 
     .loader {
       display: flex;
@@ -831,13 +844,36 @@ $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     };
 
     .containerMatch__text-link{
-      font-family: $font-family-sans-serif;
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: $text-button-one;
-      text-decoration: none;
-      transition: all ease 0.25s;
+     
+
+      @include breakpoint(xs) {
+        text-align: center;
+        font-family: $font-family-sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $text-button-one;
+        text-decoration: none;
+        transition: all ease 0.25s;
+        line-height: 38px;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+  
+      @include breakpoint(md) {
+        text-align: left;
+        font-family: $font-family-sans-serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $text-button-one;
+        text-decoration: none;
+        transition: all ease 0.25s;
+        line-height: 38px;
+        display: inline-block;
+
+      }
+
       &:hover{
+        line-height: 0;
         color: $fondo-button-two-hover;
       }
     }
