@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 // Variables 
 $fondo-body: #ffffff;
 $fondo-chat: #fafafa;
@@ -20,9 +22,10 @@ $border-radius-5: 5px;
 $border-radius-10:10px;
 $border-radius-15:15px;
 $border-radius-20:20px;
+$fontRoboto:"Roboto Condensed", sans-serif;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: $fontRoboto;
   line-height: 1.5;
   font-weight: 400;
 
@@ -56,22 +59,29 @@ body {
   display: flex;
   place-items: center;
   min-height: 100vh;
+  background-color: $fondo-button-two-hover;
 }
 
 .chat {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 50%;
-  height: 100%;
-  max-height: 600px;
-  margin: 0 auto;
-  border-radius: $border-radius-0;
+  max-width: 40%;
+  height: auto;
+  overflow: hidden;
+  margin: 2 auto;
+  border-radius: $border-radius-10;
   background-color: $fondo-chat;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
+  h1{
+    font-family: $fontRoboto;
+    text-align: left;
+    font-size: 2rem;
+    color: $color-text;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
@@ -82,10 +92,13 @@ body {
     &-logo {
       display: flex;
       align-items: center;
-      flex: 1;
-      font-size: 1.25rem;
-      font-weight: 600;
+      width: 60px;
+      height: 60px;
       text-align: center;
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
     &-button {
       display: flex;
@@ -147,10 +160,53 @@ body {
       }
     }
   }
-
+  &__comentarios{
+    color: grey;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    padding: 0.5rem 1rem;
+    font-family: $fontRoboto;
+    font-weight: 600;
+    color: $color-text;
+  }
+  &__comentario {
+    width: 100%;
+    height: 40px;
+    background-color:$fondo-button-two;
+    border: 2px solid $border-button;
+    border-radius: $border-radius-5;
+    color: $text-button-two;
+    transition: all ease 0.25s;
+    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.03125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    i{
+      // margin-top: 4px;
+      margin-right: 5px;
+      font-size: 1.3rem;
+    }
+    &:hover {
+      background-color: $fondo-button-two-hover;
+      color: $text-button-two;
+    }
+  }
   &__body{
     width: 100%;
     padding: 1rem;
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 5px solid $border;
+    }
+
     &-contenedorPadre{
       display: flex;
       flex-direction: row;
@@ -179,6 +235,17 @@ body {
         margin:0;
         border: 1px solid $border-left;
         position: relative;
+      }
+      &-text-name{
+        // background-color:$fondo-cometario;
+        // border-radius:$border-radius-5;
+        // padding: 18px 15px 18px 25px;
+        // margin:0;
+        // border: 1px solid $border-left;
+        // position: relative;
+        color: #2c7fb7;
+        font-weight: 600;
+        display: block;
       }
       &-text:after{
         content:'';
@@ -226,6 +293,66 @@ body {
           color: #989898;
       }
     }
+  }
+}
+
+#modalComentarios{
+  width: 100%;
+  height: auto;
+  #formulario{
+    .button{
+      width: 100%;
+      height: 40px;
+      background-color:$fondo-button-two;
+      border: 2px solid $border-button;
+      border-radius: $border-radius-5;
+      color: $text-button-two;
+      transition: all ease 0.25s;
+      font-size: 1rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.03125rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.5rem 0;
+      i{
+        // margin-top: 4px;
+        margin-right: 5px;
+        font-size: 1.3rem;
+      }
+      &:hover {
+        background-color: $fondo-button-two-hover;
+        color: $text-button-two;
+      }
+    }
+  }
+}
+
+.buttonMostrarMas{
+  width: 90%;
+  height: 40px;
+  background-color:$fondo-button-two;
+  border: 2px solid $border-button;
+  border-radius: $border-radius-5;
+  color: $text-button-two;
+  transition: all ease 0.25s;
+  font-size: 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.03125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  margin: 1rem auto;
+  &:hover{
+    background-color: $fondo-button-two-hover;
+    color: $text-button-two;
   }
 }
 
